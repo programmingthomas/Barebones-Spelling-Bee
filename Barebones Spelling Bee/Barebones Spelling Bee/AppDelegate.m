@@ -1,14 +1,25 @@
-//
-//  AppDelegate.m
-//  Barebones Spelling Bee
-//
-//  Created by Thomas Denney on 30/09/2012.
-//  Copyright (c) 2012 Programming Thomas. All rights reserved.
-//
+/*
+ Barebones Spelling Bee is a simple iOS app based on flspellingbee.co.uk
+ Copyright (C) 2012  Programming Thomas
+ 
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ 
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
 #import "AppDelegate.h"
-
-#import "MasterViewController.h"
+#import "WordListViewController.h"
+#import "PracticeViewController.h"
+#import "SettingsViewController.h"
 
 @implementation AppDelegate
 
@@ -18,48 +29,55 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-        UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-        splitViewController.delegate = (id)navigationController.topViewController;
-        
-        UINavigationController *masterNavigationController = splitViewController.viewControllers[0];
-        MasterViewController *controller = (MasterViewController *)masterNavigationController.topViewController;
-        controller.managedObjectContext = self.managedObjectContext;
-    } else {
-        UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-        MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
-        controller.managedObjectContext = self.managedObjectContext;
-    }
+    NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+    if ([settings objectForKey:@"language"] == nil) [settings setObject:@"es" forKey:@"language"];
+    if ([settings objectForKey:@"stage"] == nil) [settings setObject:[NSNumber numberWithInt:1] forKey:@"stage"];
+    [settings synchronize];
+    [self copyWordListToDefaultLocation];
+    UITabBarController *tbc = (UITabBarController*)self.window.rootViewController;
+    UINavigationController *nc = [tbc.childViewControllers objectAtIndex:1];
+    WordListViewController *wlvc = [nc.childViewControllers objectAtIndex:0];
+    PracticeViewController *pvc = [tbc.childViewControllers objectAtIndex:2];
+    SettingsViewController *svc = [tbc.childViewControllers objectAtIndex:3];
+    svc.pvc = pvc;
+    svc.wlvc = wlvc;
+    pvc.context = wlvc.context = self.managedObjectContext;
     return YES;
 }
+
+-(void)copyWordListToDefaultLocation
+{
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *defaultWordListPath = [documentsPath stringByAppendingPathComponent:@"words.xml"];
+    BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:defaultWordListPath];
+    NSURL *urlForWebResource = [NSURL URLWithString:@"http://www.flspellingbee.co.uk/xml.xml"];
+    NSError *error;
+    NSString *fromWeb = [NSString stringWithContentsOfURL:urlForWebResource encoding:NSASCIIStringEncoding error:&error];
+    if (error != nil) NSLog(@"%@", [error localizedDescription]);
+    //Copy if has got a new version from the web
+    if (fromWeb != nil)
+    {
+        [fromWeb writeToFile:defaultWordListPath atomically:NO encoding:NSUTF16StringEncoding error:nil];
+    }
+    //Copy from the bundle if the file doesn't exist and internet is unavailable
+    else if (!fileExists)
+    {
+        NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"defaultwordlist" ofType:@"xml"];
+        NSString *toWrite = [NSString stringWithContentsOfFile:bundlePath encoding:NSUTF16StringEncoding error:nil];
+        [toWrite writeToFile:defaultWordListPath atomically:NO encoding:NSUTF16StringEncoding error:nil];
+    }
+}
 							
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
+- (void)applicationWillResignActive:(UIApplication *)application {}
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
+- (void)applicationDidEnterBackground:(UIApplication *)application {}
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
+- (void)applicationWillEnterForeground:(UIApplication *)application {}
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
+- (void)applicationDidBecomeActive:(UIApplication *)application {}
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
 
@@ -69,10 +87,7 @@
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-             // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
         } 
     }
 }
@@ -120,31 +135,7 @@
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-         
-         Typical reasons for an error here include:
-         * The persistent store is not accessible;
-         * The schema for the persistent store is incompatible with current managed object model.
-         Check the error message to determine what the actual problem was.
-         
-         
-         If the persistent store is not accessible, there is typically something wrong with the file path. Often, a file URL is pointing into the application's resources directory instead of a writeable directory.
-         
-         If you encounter schema incompatibility errors during development, you can reduce their frequency by:
-         * Simply deleting the existing store:
-         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil]
-         
-         * Performing automatic lightweight migration by passing the following dictionary as the options parameter:
-         @{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES}
-         
-         Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
-         
-         */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
     }    
     
     return _persistentStoreCoordinator;

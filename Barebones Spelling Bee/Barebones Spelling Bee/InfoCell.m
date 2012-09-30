@@ -14,19 +14,26 @@
  
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
-#import <UIKit/UIKit.h>
+#import "InfoCell.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@implementation InfoCell
 
-@property (strong, nonatomic) UIWindow *window;
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        // Initialization code
+    }
+    return self;
+}
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
 
-- (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
+    // Configure the view for the selected state
+}
 
 @end

@@ -14,19 +14,25 @@
  
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import "Word.h"
+#import "WordLoader.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface PracticeViewController : UIViewController<UITextFieldDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property WordLoader *wordLoader;
+@property NSMutableArray *words;
+@property Word *currentWord;
+@property NSManagedObjectContext *context;
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (weak, nonatomic) IBOutlet UILabel *randomWord;
+@property (weak, nonatomic) IBOutlet UITextField *practiceBox;
+@property (weak, nonatomic) IBOutlet UILabel *correctLabel;
+- (IBAction)finishedTyping:(id)sender;
 
-- (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
+-(void)load;
 
 @end

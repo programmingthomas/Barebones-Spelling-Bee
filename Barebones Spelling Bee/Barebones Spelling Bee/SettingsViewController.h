@@ -14,19 +14,16 @@
  
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 #import <UIKit/UIKit.h>
+#import "WordListViewController.h"
+#import "PracticeViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface SettingsViewController : UITableViewController
 
-@property (strong, nonatomic) UIWindow *window;
-
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
-- (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
+@property NSUserDefaults *settings;
+@property WordListViewController *wlvc;
+@property PracticeViewController *pvc;
 
 @end

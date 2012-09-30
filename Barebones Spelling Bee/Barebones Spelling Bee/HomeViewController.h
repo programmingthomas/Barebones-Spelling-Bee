@@ -14,19 +14,15 @@
  
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface HomeViewController : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
-
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
-- (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
+@property NSManagedObjectContext *managedObjectContext;
+@property (weak, nonatomic) IBOutlet UITextView *langaugeAndStageInformation;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *progress;
 
 @end
