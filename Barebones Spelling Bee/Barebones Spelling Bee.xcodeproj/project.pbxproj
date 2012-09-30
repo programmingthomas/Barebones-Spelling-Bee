@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E9BDBF2D16182E0B0088AC7F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9BDBF2C16182E0B0088AC7F /* UIKit.framework */; };
+		E9BDBF2F16182E0B0088AC7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9BDBF2E16182E0B0088AC7F /* Foundation.framework */; };
+		E9BDBF3116182E0B0088AC7F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9BDBF3016182E0B0088AC7F /* CoreGraphics.framework */; };
+		E9BDBF3316182E0B0088AC7F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9BDBF3216182E0B0088AC7F /* CoreData.framework */; };
+		E9BDBF3916182E0B0088AC7F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9BDBF3716182E0B0088AC7F /* InfoPlist.strings */; };
+		E9BDBF3B16182E0B0088AC7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BDBF3A16182E0B0088AC7F /* main.m */; };
+		E9BDBF3F16182E0B0088AC7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BDBF3E16182E0B0088AC7F /* AppDelegate.m */; };
+		E9BDBF4116182E0B0088AC7F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BDBF4016182E0B0088AC7F /* Default.png */; };
+		E9BDBF4316182E0B0088AC7F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BDBF4216182E0B0088AC7F /* Default@2x.png */; };
+		E9BDBF4516182E0B0088AC7F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BDBF4416182E0B0088AC7F /* Default-568h@2x.png */; };
+		E9BDBF4816182E0B0088AC7F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BDBF4616182E0B0088AC7F /* MainStoryboard_iPhone.storyboard */; };
+		E9BDBF4B16182E0B0088AC7F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BDBF4916182E0B0088AC7F /* MainStoryboard_iPad.storyboard */; };
+		E9BDBF4E16182E0B0088AC7F /* Barebones_Spelling_Bee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9BDBF4C16182E0B0088AC7F /* Barebones_Spelling_Bee.xcdatamodeld */; };
+		E9BDBF5116182E0B0088AC7F /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BDBF5016182E0B0088AC7F /* MasterViewController.m */; };
+		E9BDBF5416182E0B0088AC7F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BDBF5316182E0B0088AC7F /* DetailViewController.m */; };
+		E9BDBF5C16182E0C0088AC7F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9BDBF5B16182E0C0088AC7F /* SenTestingKit.framework */; };
+		E9BDBF5D16182E0C0088AC7F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9BDBF2C16182E0B0088AC7F /* UIKit.framework */; };
+		E9BDBF5E16182E0C0088AC7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9BDBF2E16182E0B0088AC7F /* Foundation.framework */; };
+		E9BDBF5F16182E0C0088AC7F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9BDBF3216182E0B0088AC7F /* CoreData.framework */; };
+		E9BDBF6716182E0C0088AC7F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9BDBF6516182E0C0088AC7F /* InfoPlist.strings */; };
+		E9BDBF6A16182E0C0088AC7F /* Barebones_Spelling_BeeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BDBF6916182E0C0088AC7F /* Barebones_Spelling_BeeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E9BDBF6016182E0C0088AC7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9BDBF1F16182E0B0088AC7F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9BDBF2716182E0B0088AC7F;
+			remoteInfo = "Barebones Spelling Bee";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E9BDBF2816182E0B0088AC7F /* Barebones Spelling Bee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Barebones Spelling Bee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9BDBF2C16182E0B0088AC7F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E9BDBF2E16182E0B0088AC7F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E9BDBF3016182E0B0088AC7F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E9BDBF3216182E0B0088AC7F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E9BDBF3616182E0B0088AC7F /* Barebones Spelling Bee-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Barebones Spelling Bee-Info.plist"; sourceTree = "<group>"; };
+		E9BDBF3816182E0B0088AC7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E9BDBF3A16182E0B0088AC7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E9BDBF3C16182E0B0088AC7F /* Barebones Spelling Bee-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Barebones Spelling Bee-Prefix.pch"; sourceTree = "<group>"; };
+		E9BDBF3D16182E0B0088AC7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E9BDBF3E16182E0B0088AC7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E9BDBF4016182E0B0088AC7F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E9BDBF4216182E0B0088AC7F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		E9BDBF4416182E0B0088AC7F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E9BDBF4716182E0B0088AC7F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		E9BDBF4A16182E0B0088AC7F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		E9BDBF4D16182E0B0088AC7F /* Barebones_Spelling_Bee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Barebones_Spelling_Bee.xcdatamodel; sourceTree = "<group>"; };
+		E9BDBF4F16182E0B0088AC7F /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		E9BDBF5016182E0B0088AC7F /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		E9BDBF5216182E0B0088AC7F /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		E9BDBF5316182E0B0088AC7F /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		E9BDBF5A16182E0C0088AC7F /* Barebones Spelling BeeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Barebones Spelling BeeTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9BDBF5B16182E0C0088AC7F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E9BDBF6416182E0C0088AC7F /* Barebones Spelling BeeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Barebones Spelling BeeTests-Info.plist"; sourceTree = "<group>"; };
+		E9BDBF6616182E0C0088AC7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E9BDBF6816182E0C0088AC7F /* Barebones_Spelling_BeeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Barebones_Spelling_BeeTests.h; sourceTree = "<group>"; };
+		E9BDBF6916182E0C0088AC7F /* Barebones_Spelling_BeeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Barebones_Spelling_BeeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9BDBF2516182E0B0088AC7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9BDBF2D16182E0B0088AC7F /* UIKit.framework in Frameworks */,
+				E9BDBF2F16182E0B0088AC7F /* Foundation.framework in Frameworks */,
+				E9BDBF3116182E0B0088AC7F /* CoreGraphics.framework in Frameworks */,
+				E9BDBF3316182E0B0088AC7F /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9BDBF5616182E0C0088AC7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9BDBF5C16182E0C0088AC7F /* SenTestingKit.framework in Frameworks */,
+				E9BDBF5D16182E0C0088AC7F /* UIKit.framework in Frameworks */,
+				E9BDBF5E16182E0C0088AC7F /* Foundation.framework in Frameworks */,
+				E9BDBF5F16182E0C0088AC7F /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E9BDBF1D16182E0B0088AC7F = {
+			isa = PBXGroup;
+			children = (
+				E9BDBF3416182E0B0088AC7F /* Barebones Spelling Bee */,
+				E9BDBF6216182E0C0088AC7F /* Barebones Spelling BeeTests */,
+				E9BDBF2B16182E0B0088AC7F /* Frameworks */,
+				E9BDBF2916182E0B0088AC7F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E9BDBF2916182E0B0088AC7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9BDBF2816182E0B0088AC7F /* Barebones Spelling Bee.app */,
+				E9BDBF5A16182E0C0088AC7F /* Barebones Spelling BeeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9BDBF2B16182E0B0088AC7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9BDBF2C16182E0B0088AC7F /* UIKit.framework */,
+				E9BDBF2E16182E0B0088AC7F /* Foundation.framework */,
+				E9BDBF3016182E0B0088AC7F /* CoreGraphics.framework */,
+				E9BDBF3216182E0B0088AC7F /* CoreData.framework */,
+				E9BDBF5B16182E0C0088AC7F /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9BDBF3416182E0B0088AC7F /* Barebones Spelling Bee */ = {
+			isa = PBXGroup;
+			children = (
+				E9BDBF3D16182E0B0088AC7F /* AppDelegate.h */,
+				E9BDBF3E16182E0B0088AC7F /* AppDelegate.m */,
+				E9BDBF4616182E0B0088AC7F /* MainStoryboard_iPhone.storyboard */,
+				E9BDBF4916182E0B0088AC7F /* MainStoryboard_iPad.storyboard */,
+				E9BDBF4F16182E0B0088AC7F /* MasterViewController.h */,
+				E9BDBF5016182E0B0088AC7F /* MasterViewController.m */,
+				E9BDBF5216182E0B0088AC7F /* DetailViewController.h */,
+				E9BDBF5316182E0B0088AC7F /* DetailViewController.m */,
+				E9BDBF4C16182E0B0088AC7F /* Barebones_Spelling_Bee.xcdatamodeld */,
+				E9BDBF3516182E0B0088AC7F /* Supporting Files */,
+			);
+			path = "Barebones Spelling Bee";
+			sourceTree = "<group>";
+		};
+		E9BDBF3516182E0B0088AC7F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9BDBF3616182E0B0088AC7F /* Barebones Spelling Bee-Info.plist */,
+				E9BDBF3716182E0B0088AC7F /* InfoPlist.strings */,
+				E9BDBF3A16182E0B0088AC7F /* main.m */,
+				E9BDBF3C16182E0B0088AC7F /* Barebones Spelling Bee-Prefix.pch */,
+				E9BDBF4016182E0B0088AC7F /* Default.png */,
+				E9BDBF4216182E0B0088AC7F /* Default@2x.png */,
+				E9BDBF4416182E0B0088AC7F /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9BDBF6216182E0C0088AC7F /* Barebones Spelling BeeTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9BDBF6816182E0C0088AC7F /* Barebones_Spelling_BeeTests.h */,
+				E9BDBF6916182E0C0088AC7F /* Barebones_Spelling_BeeTests.m */,
+				E9BDBF6316182E0C0088AC7F /* Supporting Files */,
+			);
+			path = "Barebones Spelling BeeTests";
+			sourceTree = "<group>";
+		};
+		E9BDBF6316182E0C0088AC7F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9BDBF6416182E0C0088AC7F /* Barebones Spelling BeeTests-Info.plist */,
+				E9BDBF6516182E0C0088AC7F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9BDBF2716182E0B0088AC7F /* Barebones Spelling Bee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9BDBF6D16182E0C0088AC7F /* Build configuration list for PBXNativeTarget "Barebones Spelling Bee" */;
+			buildPhases = (
+				E9BDBF2416182E0B0088AC7F /* Sources */,
+				E9BDBF2516182E0B0088AC7F /* Frameworks */,
+				E9BDBF2616182E0B0088AC7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Barebones Spelling Bee";
+			productName = "Barebones Spelling Bee";
+			productReference = E9BDBF2816182E0B0088AC7F /* Barebones Spelling Bee.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E9BDBF5916182E0C0088AC7F /* Barebones Spelling BeeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9BDBF7016182E0C0088AC7F /* Build configuration list for PBXNativeTarget "Barebones Spelling BeeTests" */;
+			buildPhases = (
+				E9BDBF5516182E0C0088AC7F /* Sources */,
+				E9BDBF5616182E0C0088AC7F /* Frameworks */,
+				E9BDBF5716182E0C0088AC7F /* Resources */,
+				E9BDBF5816182E0C0088AC7F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9BDBF6116182E0C0088AC7F /* PBXTargetDependency */,
+			);
+			name = "Barebones Spelling BeeTests";
+			productName = "Barebones Spelling BeeTests";
+			productReference = E9BDBF5A16182E0C0088AC7F /* Barebones Spelling BeeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9BDBF1F16182E0B0088AC7F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Programming Thomas";
+			};
+			buildConfigurationList = E9BDBF2216182E0B0088AC7F /* Build configuration list for PBXProject "Barebones Spelling Bee" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E9BDBF1D16182E0B0088AC7F;
+			productRefGroup = E9BDBF2916182E0B0088AC7F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9BDBF2716182E0B0088AC7F /* Barebones Spelling Bee */,
+				E9BDBF5916182E0C0088AC7F /* Barebones Spelling BeeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9BDBF2616182E0B0088AC7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9BDBF3916182E0B0088AC7F /* InfoPlist.strings in Resources */,
+				E9BDBF4116182E0B0088AC7F /* Default.png in Resources */,
+				E9BDBF4316182E0B0088AC7F /* Default@2x.png in Resources */,
+				E9BDBF4516182E0B0088AC7F /* Default-568h@2x.png in Resources */,
+				E9BDBF4816182E0B0088AC7F /* MainStoryboard_iPhone.storyboard in Resources */,
+				E9BDBF4B16182E0B0088AC7F /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9BDBF5716182E0C0088AC7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9BDBF6716182E0C0088AC7F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E9BDBF5816182E0C0088AC7F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9BDBF2416182E0B0088AC7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9BDBF3B16182E0B0088AC7F /* main.m in Sources */,
+				E9BDBF3F16182E0B0088AC7F /* AppDelegate.m in Sources */,
+				E9BDBF4E16182E0B0088AC7F /* Barebones_Spelling_Bee.xcdatamodeld in Sources */,
+				E9BDBF5116182E0B0088AC7F /* MasterViewController.m in Sources */,
+				E9BDBF5416182E0B0088AC7F /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9BDBF5516182E0C0088AC7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9BDBF6A16182E0C0088AC7F /* Barebones_Spelling_BeeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E9BDBF6116182E0C0088AC7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9BDBF2716182E0B0088AC7F /* Barebones Spelling Bee */;
+			targetProxy = E9BDBF6016182E0C0088AC7F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E9BDBF3716182E0B0088AC7F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9BDBF3816182E0B0088AC7F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E9BDBF4616182E0B0088AC7F /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9BDBF4716182E0B0088AC7F /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		E9BDBF4916182E0B0088AC7F /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9BDBF4A16182E0B0088AC7F /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		E9BDBF6516182E0C0088AC7F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9BDBF6616182E0C0088AC7F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E9BDBF6B16182E0C0088AC7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E9BDBF6C16182E0C0088AC7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E9BDBF6E16182E0C0088AC7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Barebones Spelling Bee/Barebones Spelling Bee-Prefix.pch";
+				INFOPLIST_FILE = "Barebones Spelling Bee/Barebones Spelling Bee-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E9BDBF6F16182E0C0088AC7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Barebones Spelling Bee/Barebones Spelling Bee-Prefix.pch";
+				INFOPLIST_FILE = "Barebones Spelling Bee/Barebones Spelling Bee-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E9BDBF7116182E0C0088AC7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Barebones Spelling Bee.app/Barebones Spelling Bee";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Barebones Spelling Bee/Barebones Spelling Bee-Prefix.pch";
+				INFOPLIST_FILE = "Barebones Spelling BeeTests/Barebones Spelling BeeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E9BDBF7216182E0C0088AC7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Barebones Spelling Bee.app/Barebones Spelling Bee";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Barebones Spelling Bee/Barebones Spelling Bee-Prefix.pch";
+				INFOPLIST_FILE = "Barebones Spelling BeeTests/Barebones Spelling BeeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9BDBF2216182E0B0088AC7F /* Build configuration list for PBXProject "Barebones Spelling Bee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9BDBF6B16182E0C0088AC7F /* Debug */,
+				E9BDBF6C16182E0C0088AC7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9BDBF6D16182E0C0088AC7F /* Build configuration list for PBXNativeTarget "Barebones Spelling Bee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9BDBF6E16182E0C0088AC7F /* Debug */,
+				E9BDBF6F16182E0C0088AC7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E9BDBF7016182E0C0088AC7F /* Build configuration list for PBXNativeTarget "Barebones Spelling BeeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9BDBF7116182E0C0088AC7F /* Debug */,
+				E9BDBF7216182E0C0088AC7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E9BDBF4C16182E0B0088AC7F /* Barebones_Spelling_Bee.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E9BDBF4D16182E0B0088AC7F /* Barebones_Spelling_Bee.xcdatamodel */,
+			);
+			currentVersion = E9BDBF4D16182E0B0088AC7F /* Barebones_Spelling_Bee.xcdatamodel */;
+			path = Barebones_Spelling_Bee.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E9BDBF1F16182E0B0088AC7F /* Project object */;
+}
