@@ -1,0 +1,2 @@
+#Readme for Barebones Spelling Bee
+This is a bare bones iOS app based on the FL Spelling Bee project ([flspellingbee.co.uk]) using their publically accessible API. The source for this project is licensed under GPL which means that any derivative work using code from this project must also be released under GPL.
