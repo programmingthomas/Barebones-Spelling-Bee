@@ -1,19 +1,18 @@
 /*
  Barebones Spelling Bee is a simple iOS app based on flspellingbee.co.uk
- Copyright (C) 2012  Programming Thomas
+ Copyright 2012 Programming Thomas
  
- This program is free software: you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation, either version 3 of the License, or
- (at your option) any later version.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
  
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+ http://www.apache.org/licenses/LICENSE-2.0
  
- You should have received a copy of the GNU General Public License
- along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
  */
 
 #import "PracticeViewController.h"
@@ -25,16 +24,16 @@
 
 @implementation PracticeViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    }
+    self = [super initWithCoder:aDecoder];
     return self;
 }
 
+//Load up the word lists using WordLoader and display a random word to begin with
 -(void)load
 {
+    self.words = [[NSMutableArray alloc] init];
     self.wordLoader = [[WordLoader alloc] init];
     [self.wordLoader load];
     self.words = self.wordLoader.words;
@@ -42,12 +41,13 @@
     [self nextWord];
 }
 
+//Load up the UI
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self load];
     self.practiceBox.delegate = self;
-    //[self.practiceBox addTarget:self action:@selector(finishedTyping:) forControlEvents:UIControlEventEditingDidEnd];
+    //This ensures that when someone taps away from the textbox the keyboard disappears
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
 }
@@ -60,7 +60,9 @@
 
 -(void)nextWord
 {
+    //arc4random() seems more random than random(). Do modulo to ensure it is less than the total word count
     int rand = arc4random() % self.words.count;
+    //Show
     self.currentWord = [self.words objectAtIndex:rand];
     self.randomWord.text = [self.currentWord.english capitalizedString];
     self.practiceBox.text = @"";
@@ -68,16 +70,18 @@
 
 -(void)checkWord
 {
+    //Basically stick the attempt in the DB
     Attempt *attempt = [NSEntityDescription insertNewObjectForEntityForName:@"Attempt" inManagedObjectContext:self.context];
     attempt.attempt = self.practiceBox.text;
     attempt.correct = self.currentWord.foreign;
     attempt.language = self.currentWord.language;
+    //Ensure correct label is visible with info
     self.correctLabel.hidden = NO;
     self.correctLabel.text = [attempt.attempt isEqualToString:attempt.correct] ? @"Correct!" : @"Wrong!";
     self.correctLabel.textColor = [attempt.attempt isEqualToString:attempt.correct] ? [UIColor greenColor] : [UIColor redColor];
 }
 
-
+//When someone hits enter
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self checkWord];
@@ -85,9 +89,9 @@
     return YES;
 }
 
-
 -(void)dismissKeyboard
 {
+    //Hides the keyboard (I still maintain a hideKeyboard:(BOOL) function should be on UITextFields...)
     [self.practiceBox resignFirstResponder];
 }
 @end

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="30"
+   height="30"
+   id="svg4296"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   inkscape:export-filename="/Users/thomas/Barebones-Spelling-Bee/Barebones Spelling Bee/Barebones Spelling Bee/Settings.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   sodipodi:docname="New document 6">
+  <defs
+     id="defs4298" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="19.166667"
+     inkscape:cx="15"
+     inkscape:cy="15"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1372"
+     inkscape:window-height="793"
+     inkscape:window-x="60"
+     inkscape:window-y="60"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4304"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4301">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1022.3622)">
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       d="M 13 2 L 12.75 5.28125 C 11.667036 5.5323144 10.635116 5.9600683 9.71875 6.53125 L 7.21875 4.40625 L 4.40625 7.21875 L 6.53125 9.71875 C 5.9600683 10.635116 5.5323144 11.667036 5.28125 12.75 L 2 13 L 2 17 L 5.28125 17.25 C 5.5323144 18.332964 5.9600683 19.364884 6.53125 20.28125 L 4.40625 22.78125 L 7.21875 25.59375 L 9.71875 23.46875 C 10.635116 24.039932 11.667036 24.467686 12.75 24.71875 L 13 28 L 17 28 L 17.25 24.71875 C 18.332964 24.467686 19.364884 24.039932 20.28125 23.46875 L 22.78125 25.59375 L 25.59375 22.78125 L 23.46875 20.28125 C 24.039932 19.364884 24.467686 18.332964 24.71875 17.25 L 28 17 L 28 13 L 24.71875 12.75 C 24.467686 11.667036 24.039932 10.635116 23.46875 9.71875 L 25.59375 7.21875 L 22.78125 4.40625 L 20.28125 6.53125 C 19.364884 5.9600683 18.332964 5.5323144 17.25 5.28125 L 17 2 L 13 2 z M 15 9 C 18.313708 9 21 11.686292 21 15 C 21 18.313708 18.313708 21 15 21 C 11.686292 21 9 18.313708 9 15 C 9 11.686292 11.686292 9 15 9 z "
+       transform="translate(0,1022.3622)"
+       id="path4306" />
+  </g>
+</svg>
